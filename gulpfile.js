@@ -78,11 +78,12 @@ gulp.task('images', function(){
 });
 
 //fonts
+//if you have a fonts dir
 //We can copy files with Gulp simply by specifying the gulp.src and gulp.dest without any plugins.
-gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
-})
+// gulp.task('fonts', function() {
+//   return gulp.src('app/fonts/**/*')
+//   .pipe(gulp.dest('dist/fonts'))
+// })
 
 //browsersync
 
@@ -120,7 +121,7 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
 /// DEFAULT ORDER OF TASKS
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'pug', 'images', 'fonts'],
+    ['sass', 'useref', 'pug', 'images'],
     function(){
       console.log('🏗️  🏛️  --> Build Complete <-- 🏛️  🏗️ ');
     }

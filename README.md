@@ -1,6 +1,6 @@
 
-A PugBox to play in. To get the html and sass down before converting it to pug to use in express
-Also some other stuff like for the sass, css, js and image if you like
+A PugBox to play in. To get the html and sass down before converting to pug to use in express
+Also some other stuff like for the sass, css, js, fonts image if you like
 
 Remember
 ----------
