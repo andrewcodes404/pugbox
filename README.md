@@ -25,3 +25,26 @@ The gulpfile.js
       .pipe(gulpif('*.css', gulp.dest('dist/css')))
       .pipe(gulp.dest('dist'));
       ```
+
+
+If you want to have some local fonts connect to them in a sass file something like _7_fonts.scss
+Download them from google fonts or wherever and convert them here --> https://transfonter.org/
+You'll get a css file that looks like this
+Don't forget to put the fonts in the font dir and
+You can also change the gulpfile.js to copy them over to the dist dir
+
+```css
+  /* raleway-regular - latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Raleway/raleway-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Raleway'), local('Raleway-Regular'),
+         url('/fonts/Raleway/raleway-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/Raleway/raleway-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/Raleway/raleway-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/Raleway/raleway-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/Raleway/raleway-v11-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+  ```
