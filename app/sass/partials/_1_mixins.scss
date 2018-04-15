@@ -1,8 +1,6 @@
 
 ///****** -----sass-mixins -----sass-mixins -----sass-mixins -----sass-mixins -----sass-mixins -----sass-mixins*****?////////
 
-
-
 ///border-it
 @mixin b1 ($color : red){border: 1px solid $color;}
 @mixin b2 ($color : red){border: 1px dashed $color;}
@@ -17,15 +15,14 @@
 /// @include headings { **whatever***}
 
 @mixin h-tags {
-    h1, h2, h3,
-    h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         @content;
     }
 }
 
 ///PX TO REM*****PX TO REM*****PX TO REM*****///////
 
-///function
+///function to turn px into rem
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
@@ -46,8 +43,6 @@
   margin-bottom: $size; //Fallback in px
   margin-bottom: calculateRem($size);
 }
-
-
 
 ///***   Breakpoints   ***///
 
