@@ -36,9 +36,7 @@
     height: 100%;
 }
 
-
 ////**** lists ****/////
-
 ul{margin-bottom: 1rem;}
 
 li{
@@ -99,14 +97,6 @@ strong{font-weight: 600;}
   column-rule: 1px solid grey;
 }
 
-
-
-
-
-
-
-
-
 //////////////////////////////////////////
 ///****   padding_&_margins.scss   ****///
 //////////////////////////////////////////
@@ -122,9 +112,6 @@ $margin3  :  3rem;
 
 //padding
 .p1px{padding: 1px;} ///use this to stop divs collapsing
-
-
-
 
 .p0{padding: 0;}
 .p05{padding: ($padding1 / 2);}
