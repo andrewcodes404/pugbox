@@ -1,10 +1,117 @@
+///////////////////////////////////
+///****   helper_classes.scss   ****///
+///////////////////////////////////
+///quick border
+.border1{ border: 1px dashed blue;}
+.border2{ border: 1px dashed orange;}
+.border3{ border: 1px dashed aqua;}
+
+/////quick hover
+.hover{
+    transform: scale(1);
+    transition: .15s;
+    &:hover{
+        color: orange;
+        transform: scale(1.15);
+        transform-origin: center;
+    }
+    cursor: pointer;
+    position: inherit;
+}
+
+////make that iframe fit
+.vid-box{
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    margin: 1rem 0;
+}
+
+.vid-box iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+////**** lists ****/////
+
+ul{margin-bottom: 1rem;}
+
+li{
+  @include fontSize(16px);
+  line-height: 1.4;
+  font-weight: 300;
+  list-style: none;
+  list-style-position: inside;
+}
+li::before{
+  content: " - "
+}
+
+////**** quotes ****/////
+em{ font-style: italic;}
+em::before{content: '"';}
+em::after{content: '"';}
+
+////**** blockquote ****////
+blockquote{
+    margin:1rem 1rem;
+    padding-left: 1rem;
+    font-style: italic;
+    color: darkslategray;
+    border-left: 1px solid;
+    line-height: 1.5;
+}
+
+
+////**** text transform ****////
+.text-lowercase {text-transform: lowercase;}
+.text-uppercase {text-transform: uppercase;}
+.text-capitalize {text-transform: capitalize;}
+strong{font-weight: 600;}
+.bold {font-weight: 500;}
+.light{font-weight: 300;}
+.underline {text-decoration: underline;}
+.italic{font-style: italic;}
+.highlight {color: yellow; background-color: pink}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+///columns
+.columns{
+  column-count: 3;
+  column-width: 225px;
+}
+.columns2{columns: 2;}
+.columns3{columns: 3;}
+.columns4{columns: 4;}
+.columns5{columns: 5;}
+
+.column-gap1{column-gap: 1rem;}
+.column-gap2{column-gap: 2rem;}
+.column-gap3{column-gap: 3rem;}
+
+.column-rule{
+  column-rule: 1px solid grey;
+}
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////
 ///****   padding_&_margins.scss   ****///
 //////////////////////////////////////////
+
 //Padding and margins
-
-
 $padding1  :  1rem;
 $padding2  :  2rem;
 $padding3  :  3rem;
@@ -13,9 +120,11 @@ $margin1  :  1rem;
 $margin2  :  2rem;
 $margin3  :  3rem;
 
-
 //padding
 .p1px{padding: 1px;} ///use this to stop divs collapsing
+
+
+
 
 .p0{padding: 0;}
 .p05{padding: ($padding1 / 2);}
